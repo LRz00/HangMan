@@ -3,7 +3,7 @@
 
 int main(void) {
 
-  printf("-----------JOGO DA FORCA----------------\n\n\n");
+  printf("-----------HANGMAN---------------\n\n\n");
 
   // VARIAVEIS:
 
@@ -38,10 +38,10 @@ int main(void) {
     *p = toupper(*p);
   }
 
-  printf("A DICA É %s\n\n", hint);
+  printf("THE HINT IS: %s\n\n", hint);
   // GAME BODDY:
   while (i < 5) {
-    printf("Escolha uma letra:\n");
+    printf("Choose a letter:\n");
     scanf(" %c", &guessL);
 
     for (int k = 0; k <= numOf; k++) {
@@ -57,7 +57,7 @@ int main(void) {
 
     if (acerto == 0) {
       i++;
-      printf("Perdeu uma vida\n");
+      printf("You lost one life!\n");
       for(int i = 0; i < erros-1; i++)
         printf(" ❤ ");
       erros--;
